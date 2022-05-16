@@ -1,0 +1,206 @@
+body {
+    margin: 0;
+    width: 100%;
+    background-color: black;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+
+.star {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background-color: white;
+}
+
+/* Set the animation, color, size and hide the text */
+.intro {
+    position: absolute;
+    max-width: 100%;
+    top: 30%;
+    left: 30%;
+    z-index: 1;
+    animation: intro 6s ease-out 1s;
+    color: rgb(75, 213, 238);
+    font-weight: 400;
+    font-size: 300%;
+    opacity: 0;
+}
+
+@media screen and (max-width: 800px) {
+    .intro {
+        position: absolute;
+        max-width: 100%;
+        top: 30%;
+        left: 10%;
+        z-index: 1;
+        animation: intro 6s ease-out 1s;
+        color: rgb(75, 213, 238);
+        font-weight: 400;
+        font-size: 300%;
+        opacity: 0;
+    }
+}
+
+@keyframes intro {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Set the animation & hide the logo */
+.logo {
+    position: absolute;
+    max-width: 100%;
+    top: 20%;
+    left: 45%;
+    z-index: 1;
+    margin: auto;
+    animation: logo 9s ease-out 9s;
+    opacity: 0;
+}
+
+@media screen and (max-width: 800px) {
+    .logo {
+        position: absolute;
+        max-width: 100%;
+        top: 20%;
+        left: 15%;
+        z-index: 1;
+        margin: auto;
+        animation: logo 9s ease-out 9s;
+        opacity: 0;
+    }
+}
+
+.logo svg {
+    width: inherit;
+}
+
+/* Scale the logo down and maintain it centered */
+@keyframes logo {
+    0% {
+        width: 18em;
+        transform: scale(2);
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+        width: 18em;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.1);
+        width: 18em;
+    }
+}
+
+p {
+    color: #FFFF82;
+}
+
+#board {
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    transform: perspective(300px) rotateX(25deg);
+    max-width: 100%;
+    transform-origin: 50% 100%;
+    text-align: justify;
+    position: absolute;
+    margin-left: -9em;
+    font-weight: bold;
+    overflow: hidden;
+    font-size: 350%;
+    height: 50em;
+    width: 18em;
+    bottom: 0;
+    left: 50%;
+}
+
+@media screen and (max-width: 800px) {
+    #board {
+        font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+        transform: perspective(300px) rotateX(25deg);
+        max-width: 100%;
+        transform-origin: 50% 100%;
+        text-align: justify;
+        position: absolute;
+        margin-left: -4em;
+        font-weight: bold;
+        overflow: hidden;
+        font-size: 350%;
+        height: 50em;
+        width: 18em;
+        bottom: 0;
+    }
+}
+
+h2 {
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    font-weight: bold;
+    color: #FFFF82;
+}
+
+#board:after {
+    position: absolute;
+    max-width: 100%;
+    content: ' ';
+    bottom: 60%;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+#content {
+    animation: scroll 50s linear 16s;
+    position: absolute;
+    top: 100%;
+    max-width: 100%;
+}
+
+#title,
+#subtitle {
+    text-align: center;
+}
+
+@keyframes scroll {
+    0% {
+        top: 100%;
+    }
+
+    100% {
+        top: -170%;
+    }
+}
+
+.text-warning {
+    color: #F9D71C !important;
+}
+
+.border-warning {
+    border-color: #F9D71C !important;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+img {
+    margin: auto;
+    width: 50%;
+}
